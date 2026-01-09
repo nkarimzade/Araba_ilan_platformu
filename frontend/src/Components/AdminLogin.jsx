@@ -32,7 +32,7 @@ function AdminLogin() {
       localStorage.setItem('adminToken', token);
       localStorage.setItem('adminUser', JSON.stringify(admin));
       
-      navigate('/admin');
+      navigate('/dashboard');
       
     } catch (error) {
       console.error('Giriş hatası:', error);

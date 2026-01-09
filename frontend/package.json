@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:admin": "vite build --mode admin",
+    "build:all": "npm run build && npm run build:admin",
+    "deploy:admin": "npm run build:admin && echo Admin build tamamlandı. dist-auth klasörünü public_html/auth içine kopyalayın.",
     "lint": "eslint .",
     "preview": "vite preview"
   },

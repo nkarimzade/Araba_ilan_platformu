@@ -27,7 +27,7 @@ function Admin() {
       const user = localStorage.getItem('adminUser');
 
       if (!token || !user) {
-        navigate('/admin/login');
+        navigate('/');
         return;
       }
 
@@ -46,7 +46,7 @@ function Admin() {
         console.error('❌ Auth kontrolü başarısız:', error);
         localStorage.removeItem('adminToken');
         localStorage.removeItem('adminUser');
-        navigate('/admin/login');
+        navigate('/');
       }
     };
 
@@ -75,7 +75,7 @@ function Admin() {
       if (error.response?.status === 401) {
         localStorage.removeItem('adminToken');
         localStorage.removeItem('adminUser');
-        navigate('/admin/login');
+        navigate('/');
         return;
       }
       console.error('❌ Hata detayları:', {
@@ -117,7 +117,7 @@ function Admin() {
       if (error.response?.status === 401) {
         localStorage.removeItem('adminToken');
         localStorage.removeItem('adminUser');
-        navigate('/admin/login');
+        navigate('/');
       }
     }
   };
@@ -143,7 +143,7 @@ function Admin() {
       if (error.response?.status === 401) {
         localStorage.removeItem('adminToken');
         localStorage.removeItem('adminUser');
-        navigate('/admin/login');
+        navigate('/');
       }
     }
   };
